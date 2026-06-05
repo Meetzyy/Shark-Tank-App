@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3000"; // REPLACE WITH YOUR DEPLOYED RENDER/GLITCH URL BEFORE UPLOADING TO NETLIFY
+const API_BASE_URL = "https://shark-tank-app-ityb.onrender.com"; // Your live Render URL
 
 let mainSection = document.getElementById("data-list-wrapper");
 
