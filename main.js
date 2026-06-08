@@ -92,16 +92,21 @@ function displayData(data)
     mainSection.innerHTML = wholeData.join(" ");
 }
 function card(id,image,founder,description,title,price,category){
-   let store=`<div style="border: 1px solid #000; padding: 10px; margin: 10px;">
-    <h3 data-id=${id}> id : ${id} </h3> 
-    <img src="${image}" height="200px" width="200px"> 
-    <h2>Founder : ${founder}</h2> 
-    <p>Description : ${description} </p> 
-    <p>Title : ${title} </p> 
-    <p>Price : ${price} </p> 
-    <p>Category : ${category} </p> 
-    <a href="#" class="card-link" data-id=${id}> Edit </a> &nbsp;&nbsp;&nbsp; 
-    <button class="card-button" data-id=${id}> Delete </button> 
+   let store=`<div class="card">
+    <div class="card__img">
+        <img src="${image}" alt="${title}">
+    </div>
+    <div class="card__content">
+        <h3 data-id=${id} class="card__title">${title}</h3> 
+        <p class="card__description"><strong>Founder:</strong> ${founder}</p> 
+        <p class="card__description">${description}</p> 
+        <p class="card__description"><strong>Price:</strong> ₹${price}</p> 
+        <p class="card__description"><strong>Category:</strong> ${category}</p> 
+        <div class="card__actions">
+            <a href="#" class="card-link button" data-id=${id}>Edit</a>
+            <button class="card-button button button-primary" data-id=${id}>Delete</button> 
+        </div>
+    </div>
 </div>` 
 return store;
 }
